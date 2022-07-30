@@ -1,0 +1,94 @@
+/* reset */
+* {margin: 0; padding: 0; font-size: 16px;}
+li {list-style: none;}
+a {color: #333; text-decoration: none;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/* layout */
+#wrap {width: 1000px; height: 1000px; margin: 0 auto; }
+#header {height: 100px;}
+#banner {}
+#content1 {}
+#content2 {}
+#footer {}
+
+/* header */
+#header h1 {float: left; padding-top: 5px;}
+#header h1 img {width: 130px;}
+#header .nav {float: right; z-index: 100;}
+#header .nav li {position: relative; float: left; width: 140px; text-align: center;}
+#header .nav li a {display: block; padding: 40px 15px; font-weight: bold;}
+#header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 80px; z-index: 100;}
+#header .nav li ul.submenu li a {padding: 20px; background: rgba(255,255,255,0.6);}
+#header .nav li ul.submenu li a:hover {color: #6600CC}
+
+/* banner */
+#banner {width: 1000px; overflow: hidden;}
+#banner img {width: 100%; display: block;}
+
+/* slide (좌우)*/
+.slideList {position: relative; width: 3000px;}
+.slideList .slideImg {position: relative; width: 1000px; float: left;}
+.slideList .slideImg h2 {font-size: 18px; position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%,-50%); background: rgba(0,0,0,0.4); padding: 10px 30px;
+    border-radius: 20px;    
+}
+
+
+/* content1 */
+#content1 {margin-top: 15px;}
+#content1 .notice {float: left; width: 49%; height: 220px; margin-right: 2%; border: 1px solid #ccc; box-sizing: border-box;}
+#content1 .ad {float: left; width: 49%; margin-right: 0;}
+#content1 .ad img {width: 100%; display: block;}
+
+/* notice */
+.notice {position: relative; padding: 30px;}
+.notice ul {}
+.notice ul li {float: left; margin-right: 20px;}
+.notice ul li a {font-size: 24px; color: #999; font-weight: bold;}
+.notice li.active a {color: #000;}
+.notice ul li ul {position: absolute; left: 30px; top: 70px; float: none; width: 100%;}
+.notice ul li ul li {width: 90%; padding: 5px 0;}
+.notice ul li ul li a {float: left; width: 60%; font-size: 16px; color: #333; 
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    font-weight: normal;}
+.notice ul li ul li span {float: right; width: 20%;}
+.notice .more {position: absolute; right: 30px; top: 35px;}
+
+/* content2 */
+#content2 {margin-top: 25px;}
+#content2 h2 {margin: 10px 0; font-weight: bold;}
+#content2 ul {}
+#content2 li {float: left; width: 24.25%; margin-right: 1%;}
+#content2 li:last-child {margin-right: 0;}
+#content2 li img {width: 100%;}
+#content2 li span {display: block; padding: 10px 0;}
+
+/* footer */
+#footer {border-top: 1px solid #ccc; margin-top: 30px; padding: 30px 0;}
+#footer address {font-style: normal; color: #666;}
+#footer address ul {width: 1000px;}
+#footer address li {position: relative; float: left; line-height: 1.7; padding: 0px 15px 0px 10px;}
+#footer address li:after {content: ''; width: 1px; height: 13px; background: #666; position: absolute; right: 0; top: 0; margin-top: 8px;}
+#footer address li.left {padding-left: 0;}
+#footer address li:last-child:after {display: none;}
+#footer address p {text-transform: uppercase; padding-top: 30px;}
+
+/* layer */
+.layer_bg {
+    display: none;
+    width: 100%; height: 100%; background: rgba(0,0,0,0.8);
+    position: fixed; left: 0; top: 0; z-index: 900;
+}
+
+.layer {
+    width: 500px; height: 500px; background: #ccc;
+    border: 2px solid #000;
+    position: absolute;
+    left: 50%; top: 50%; z-index: 1000;
+    transform: translate(-50%, -50%);
+
+}
+
+.layer h2 {padding: 20px; font-size: 30px;}
+.layer .close {position: absolute; bottom: 20px; right: 30px; font-size: 20px;}
